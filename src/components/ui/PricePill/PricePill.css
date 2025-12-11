@@ -1,0 +1,21 @@
+.price-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: rgba(56, 189, 248, 0.14);
+  border: 1px solid rgba(56, 189, 248, 0.35);
+  color: #e0f2fe;
+  border-radius: 999px;
+  padding: 0.35rem 0.75rem;
+  font-weight: 700;
+}
+
+.price-pill .label {
+  font-size: 0.9rem;
+  color: #bae6fd;
+  font-weight: 600;
+}
+
+.price-pill .value {
+  letter-spacing: -0.01em;
+}

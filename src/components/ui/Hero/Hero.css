@@ -1,0 +1,21 @@
+.hero {
+  background: linear-gradient(135deg, #0f4c75, #1b6ca8);
+  color: #ffffff;
+  border-radius: 20px;
+  padding: 32px 28px;
+  width: min(960px, 100%);
+  box-shadow: 0 14px 36px rgba(12, 66, 115, 0.18);
+  text-align: center;
+}
+
+.brand {
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.tagline {
+  margin: 12px 0 24px;
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.92);
+}
