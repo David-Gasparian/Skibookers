@@ -1,0 +1,39 @@
+.resort-card {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: var(--space-md);
+  align-items: center;
+}
+
+.resort-card__image {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 14px;
+}
+
+.resort-card__content h3 {
+  margin: 0 0 0.3rem;
+}
+
+.resort-card__content p {
+  margin: 0 0 0.35rem;
+}
+
+.resort-card__note {
+  color: var(--color-muted);
+}
+
+.resort-rating {
+  background: rgba(250, 204, 21, 0.1);
+  color: #facc15;
+  padding: 0.4rem 0.65rem;
+  border-radius: 999px;
+  font-weight: 700;
+}
+
+@media (max-width: 960px) {
+  .resort-card {
+    grid-template-columns: 1fr;
+  }
+}

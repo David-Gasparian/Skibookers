@@ -1,10 +1,20 @@
 import './Card.css';
 
-function Card({ title, children }) {
+function Card({ title, subtitle, actions, tight = false, children }) {
+  const classes = ['card', tight ? 'tight' : ''].filter(Boolean).join(' ');
+
   return (
-    <section className="card">
-      <h2 className="card-title">{title}</h2>
-      <p className="card-subtitle">{children}</p>
+    <section className={classes}>
+      {(title || actions) && (
+        <header className="card-header">
+          <div>
+            {title && <h2 className="card-title">{title}</h2>}
+            {subtitle && <p className="card-subtitle">{subtitle}</p>}
+          </div>
+          {actions && <div className="card-actions">{actions}</div>}
+        </header>
+      )}
+      <div className="card-body">{children}</div>
     </section>
   );
 }

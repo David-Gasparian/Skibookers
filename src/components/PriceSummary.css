@@ -1,0 +1,46 @@
+.price-summary {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.price-summary__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-md);
+}
+
+.price-summary__eyebrow {
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-muted);
+  font-size: 0.85rem;
+}
+
+.price-summary__title {
+  margin: 0.2rem 0 0;
+}
+
+.price-summary__list {
+  display: grid;
+  gap: 0.6rem;
+  margin: 0;
+}
+
+.price-summary__row {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 600;
+}
+
+.price-summary__row dt {
+  text-transform: capitalize;
+  color: var(--color-muted);
+}
+
+.price-summary__row dd {
+  margin: 0;
+  color: var(--color-text);
+}

@@ -1,0 +1,40 @@
+.trip-row {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: var(--space-md);
+  align-items: center;
+}
+
+.trip-row__info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.trip-row__label {
+  margin: 0;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.trip-row__helper {
+  margin: 0;
+  color: var(--color-muted);
+  font-size: 0.95rem;
+}
+
+.trip-row__actions {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.trip-row__price {
+  color: var(--color-muted);
+  font-size: 0.95rem;
+}
+
+@media (max-width: 900px) {
+  .trip-row {
+    grid-template-columns: 1fr;
+  }
+}
