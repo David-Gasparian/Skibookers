@@ -1,0 +1,13 @@
+.recommendations {
+  margin: 0;
+  padding-left: 1.1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  color: var(--color-text);
+}
+
+.recommendations li {
+  color: var(--color-text);
+  line-height: 1.5;
+}
