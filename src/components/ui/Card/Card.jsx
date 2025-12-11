@@ -1,7 +1,8 @@
+import { classNames } from '../../../utils';
 import './Card.css';
 
 function Card({ title, subtitle, actions, tight = false, children }) {
-  const classes = ['card', tight ? 'tight' : ''].filter(Boolean).join(' ');
+  const classes = classNames('card', tight && 'tight');
 
   return (
     <section className={classes}>

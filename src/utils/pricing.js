@@ -36,9 +36,11 @@ const calcInsurancePrice = (plan) => (plan?.editable?.price ?? 0) * TRIP_DETAILS
 
 const calcAddOnPrice = (selectedIds, addOns) => {
   const lookup = new Map(addOns.map((item) => [item.id, item]));
+  
   return selectedIds.reduce((total, id) => {
     const addOn = lookup.get(id);
     if (!addOn) return total;
+    
     return total + addOn.editable.price * TRIP_DETAILS.guests;
   }, 0);
 };

@@ -16,7 +16,7 @@
 
 .button:hover {
   transform: translateY(-1px);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+  box-shadow: var(--shadow-button);
 }
 
 .button:active {
@@ -25,8 +25,8 @@
 
 .button.primary {
   background: linear-gradient(135deg, var(--color-accent), var(--color-highlight));
-  color: #0b1222;
-  box-shadow: 0 12px 25px rgba(56, 189, 248, 0.25);
+  color: var(--color-ink-strong);
+  box-shadow: var(--shadow-button-accent);
 }
 
 .button.ghost {

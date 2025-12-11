@@ -1,4 +1,4 @@
-import { Select } from './ui';
+import { Select } from '../../ui';
 import './TripRow.css';
 
 function TripRow({ label, helper, value, options, onChange, priceHint }) {

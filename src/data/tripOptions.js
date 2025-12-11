@@ -1,4 +1,4 @@
-export const resorts = [
+const resorts = [
   {
     id: 'resort-chamonix',
     name: 'Chamonix',
@@ -27,7 +27,7 @@ export const resorts = [
   },
 ];
 
-export const hotels = [
+const hotels = [
   {
     id: 'hotel-alpine-lodge',
     name: 'Alpine Lodge',
@@ -56,7 +56,7 @@ export const hotels = [
   },
 ];
 
-export const roomBoards = [
+const roomBoards = [
   {
     id: 'board-standard',
     label: 'Standard',
@@ -86,7 +86,7 @@ export const roomBoards = [
   },
 ];
 
-export const skipasses = [
+const skipasses = [
   {
     id: 'skipass-3day',
     durationDays: 3,
@@ -109,7 +109,7 @@ export const skipasses = [
   },
 ];
 
-export const transfers = [
+const transfers = [
   {
     id: 'transfer-shuttle',
     type: 'Shared Shuttle',
@@ -132,7 +132,7 @@ export const transfers = [
   },
 ];
 
-export const flights = [
+const flights = [
   {
     id: 'flight-gva-lhr',
     route: 'London (LHR) → Geneva (GVA)',
@@ -155,7 +155,7 @@ export const flights = [
   },
 ];
 
-export const insurancePlans = [
+const insurancePlans = [
   {
     id: 'insurance-basic',
     name: 'Basic Cover',
@@ -178,7 +178,7 @@ export const insurancePlans = [
   },
 ];
 
-export const addOns = [
+const addOns = [
   {
     id: 'addon-lesson',
     name: 'Group Lesson Pack',
@@ -211,7 +211,7 @@ export const addOns = [
   },
 ];
 
-export const tripOptions = {
+const tripOptions = {
   resorts,
   hotels,
   roomBoards,

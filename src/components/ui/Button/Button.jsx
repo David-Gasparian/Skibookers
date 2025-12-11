@@ -1,7 +1,8 @@
+import { classNames } from '../../../utils';
 import './Button.css';
 
 function Button({ children, className = '', ...props }) {
-  const classes = ['button', className].filter(Boolean).join(' ');
+  const classes = classNames('button', className);
 
   return (
     <button className={classes} {...props}>

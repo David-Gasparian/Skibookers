@@ -2,9 +2,9 @@
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
-  background: rgba(56, 189, 248, 0.14);
-  border: 1px solid rgba(56, 189, 248, 0.35);
-  color: #e0f2fe;
+  background: var(--color-accent-strong);
+  border: 1px solid var(--color-accent-border);
+  color: var(--color-price-text);
   border-radius: 999px;
   padding: 0.35rem 0.75rem;
   font-weight: 700;
@@ -12,7 +12,7 @@
 
 .price-pill .label {
   font-size: 0.9rem;
-  color: #bae6fd;
+  color: var(--color-price-subtle);
   font-weight: 600;
 }
 

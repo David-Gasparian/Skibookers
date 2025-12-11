@@ -1,16 +1,27 @@
 import React, { useMemo, useState } from 'react';
-import { Button, Hero } from './components/ui';
-import tripOptions from './data/tripOptions';
-import TripRow from './components/TripRow';
-import AddOnSelector from './components/AddOnSelector';
-import PriceSummary from './components/PriceSummary';
-import RecommendedResort from './components/RecommendedResort';
-import RecommendedForYou from './components/RecommendedForYou';
-import { getTripBreakdown, TRIP_DETAILS, formatCurrency } from './utils/pricing';
-import './components/ui/ui.css';
-import './App.css';
 
-const { resorts, hotels, roomBoards, skipasses, transfers, flights, insurancePlans, addOns } = tripOptions;
+import { Button, Hero } from './components/ui';
+import { tripOptions } from './data';
+import { 
+  AddOnSelector,
+  PriceSummary, 
+  RecommendedForYou, 
+  RecommendedResort, 
+  TripRow 
+} from './components/sections';
+import { getTripBreakdown, TRIP_DETAILS, formatCurrency } from './utils';
+import './styles/App.css';
+
+const { 
+  resorts, 
+  hotels, 
+  roomBoards, 
+  skipasses, 
+  transfers, 
+  flights, 
+  insurancePlans, 
+  addOns 
+} = tripOptions;
 
 const defaultTripState = {
   resort: resorts[0]?.id,
@@ -28,6 +39,7 @@ function App() {
 
   const selectedTrip = useMemo(() => {
     const findById = (items, id) => items.find((item) => item.id === id);
+
     return {
       resort: findById(resorts, trip.resort),
       hotel: findById(hotels, trip.hotel),
@@ -66,7 +78,6 @@ function App() {
       <Hero
         brand="Skibookers"
         tagline="Personalize your ski break with live prices and smart suggestions."
-        ctaLabel="Start planning"
       />
 
       <div className="layout">
@@ -141,7 +152,11 @@ function App() {
                 label: `${transfer.type} (${transfer.frequency})`,
               }))}
               onChange={(value) => setTrip({ ...trip, transfer: value })}
-              priceHint={formatCurrency(selectedTrip.transfer?.editable?.pricePerPerson ?? selectedTrip.transfer?.editable?.pricePerVehicle ?? 0)}
+              priceHint={formatCurrency(
+                selectedTrip.transfer?.editable?.pricePerPerson 
+                ?? selectedTrip.transfer?.editable?.pricePerVehicle 
+                ?? 0
+              )}
             />
 
             <TripRow
@@ -163,7 +178,6 @@ function App() {
             />
 
             <div className="add-ons-row">
-              <p className="trip-row__label">Add ons</p>
               <AddOnSelector
                 options={addOns}
                 selectedIds={trip.addOns}
@@ -176,7 +190,7 @@ function App() {
         </div>
 
         <aside className="sidebar">
-          <PriceSummary breakdown={pricing} onCheckout={handleCheckout} />
+          <PriceSummary breakdown={pricing} tripDetails={TRIP_DETAILS} onCheckout={handleCheckout} />
         </aside>
       </div>
     </div>

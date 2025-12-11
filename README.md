@@ -7,6 +7,14 @@ React + Vite scaffold for the ski trip customization experience.
 - Editable trip package rows (resort, hotel, room & board, skipass, transfer, flight, insurance) plus multi-select add ons.
 - Recommended resort and “Recommended for you” guidance cards with quick context.
 - Pricing helpers that calculate per-category totals, add-on rollups, and the overall trip total.
+- Centralized design tokens live in `src/styles/theme.css` and are shared by globals in `src/styles`.
+- Sections are co-located (e.g., `src/components/sections/TripRow/TripRow.jsx` + CSS) and re-exported via `src/components/sections/index.js`.
+
+## Architecture
+- React + Vite with a flat entry (`src/main.jsx` → `src/App.jsx`).
+- UI kit lives in `src/components/ui` with barrel exports; larger page sections in `src/components/sections` with co-located CSS and a barrel.
+- Domain data sits in `src/data`, and helpers (pricing, classNames) live in `src/utils` with their own barrel.
+- Global styles and theme tokens are in `src/styles`; app-wide CSS imports happen in `src/main.jsx`.
 
 ## Setup
 1. Install dependencies:
